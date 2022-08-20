@@ -1,0 +1,48 @@
+1.  Set boot order in virtual box to ensure the hard drive is booted first after
+    installing from the ISO.
+2.  Follow Arch boot instructions
+    - Use cfdisk instead of fdisk
+	  - add base-devel to pacstrap command
+3.  Install grub
+4.  Add networking details to the /etc/hosts file
+5.  Add standard user and password
+6.  Install sudo
+7.  Add standard user to wheel group
+8.  Uncomment wheel line with visudo to allow wheel group sudo privileges
+9.  copy xinitrc default to home folder, rename to .xinitrc, and modify to launch
+    window manager
+10. Install:
+    x - git
+    x - acpi
+    x - vim
+    x - xorg, xorg-xinit
+    x - yay
+    x - brave-bin using yay
+    x - alacritty
+    x - berry window manager
+    x - rofi
+    x - nitrogen
+    x - JetBrains Nerd Font
+    x - ctags
+    x - unzip
+    x - Papirus icon set
+    x - neovim
+    x - polkit
+    x - polybar
+    - picom
+11. Clone dot files
+
+To do:
+  - Alt-tab previewer
+  - Polybar:
+    - Shutdown widget
+  - Try picom
+  - Finish berry configuration:
+    - Reverse direction for alt-tab a possibility?
+    - Manual gaps for snapping
+    - Add top and bottom half screen snapping
+  - Clean up dotfiles and post to github
+  - Add Neovim configuration
+    - Autocompletion plugin 
+    - Fuzzy finder plugin
+
