@@ -141,12 +141,6 @@ set fillchars=vert:\
 hi VertSplit ctermbg=bg
 
 "===============================================================================
-" Templates
-"===============================================================================
-" insert ila template
-nnoremap <leader>ila :r ~/seneca/users/flechsig/linux_cfg_files/vim_templates/ila_template.txt<C-m>
-
-"===============================================================================
 " Key mappings
 "===============================================================================
 let mapleader=" "
