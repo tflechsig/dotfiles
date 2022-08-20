@@ -44,6 +44,8 @@ configuration {
 }
 
 window {
+  border: 2px;
+  border-color: @fg;
   transparency: "real";
 }
 
@@ -67,7 +69,7 @@ prompt {
 }
 
 listview {
-  lines: 8;
+  lines: 6;
 }
 
 element {
