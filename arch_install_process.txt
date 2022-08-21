@@ -14,7 +14,6 @@
 10. Install:
     x - git
     x - acpi
-    x - vim
     x - xorg, xorg-xinit
     x - yay
     x - brave-bin using yay
@@ -29,19 +28,19 @@
     x - neovim
     x - polkit
     x - polybar
+    x - curl
+    x - htop
+    x - pulseaudio
     - picom
 11. Clone dot files
 
 To do:
   - Alt-tab previewer
-  - Polybar:
-    - Shutdown widget
   - Try picom
   - Finish berry configuration:
     - Reverse direction for alt-tab a possibility?
     - Manual gaps for snapping
     - Add top and bottom half screen snapping
-  - Clean up dotfiles and post to github
   - Add Neovim configuration
     - Autocompletion plugin 
     - Fuzzy finder plugin
