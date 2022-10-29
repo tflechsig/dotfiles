@@ -4,6 +4,7 @@ alias vim=nvim
 alias poff="systemctl poweroff"
 # Manage dot files with bare git repo 
 alias gid="git --git-dir=$HOME/.dotfiles.git/ --work-tree=$HOME/"
+alias spotify="spotify --no-zygote"
 
 # case insensitive tab completion
 bind "set completion-ignore-case on"
