@@ -1,21 +1,22 @@
 #!/bin/bash
 
 # Set decoration geometry
-berryc border_width       5
-berryc inner_border_width 3
-berryc title_height       0
-berryc top_gap            40
+berryc border_width       0
+berryc inner_border_width 6
+berryc title_height       30
+berryc top_gap            48
 
 # Set decoration colors
-berryc focus_color         ffffff
-berryc unfocus_color       000000
-berryc inner_focus_color   555555
-berryc inner_unfocus_color 555555
-berryc text_focus_color    ffffff
-berryc text_unfocus_color  eeeeee
+berryc inner_focus_color    88C0D0
+berryc inner_unfocus_color  434C5E
+berryc focus_color          303030
+berryc unfocus_color        303030
+berryc text_focus_color     ECEFF4
+berryc text_unfocus_color   D8DEE9
 
 # Other options
-berryc smart_place "true"
-berryc draw_text   "false"
-berryc edge_lock   "true"
-berryc set_font    "JetBrains Mono Nerd Font-10"
+berryc smart_place  "true"
+berryc draw_text    "true"
+berryc edge_lock    "true"
+berryc set_font     "JetBrains Mono Nerd Font-12"
+berryc decorate_new "true"
