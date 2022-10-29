@@ -84,7 +84,7 @@ set laststatus=2
 hi statusline   cterm=bold ctermbg=50 ctermfg=16 guibg=#00f0f0 guifg=#000000
 hi statuslinenc cterm=bold ctermbg=238 ctermfg=15 guibg=#6f6f6f guifg=#000000
 
- set statusline=\ %{DisplayMode()}\ \|
+ set statusline=\ %{DisplayMode()}\ 
                 \%{gitstatus}
                 \\ %t
                 \%=
@@ -135,7 +135,7 @@ autocmd FileType netrw setl bufhidden=delete
 set cmdwinheight=2
 
 " Set vertical window separator character
-set fillchars=vert:\ 
+set fillchars=vert:│
 
 " Set background color of vertical split
 hi VertSplit ctermbg=bg
