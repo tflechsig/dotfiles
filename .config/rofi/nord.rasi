@@ -44,9 +44,10 @@ configuration {
 }
 
 window {
-  border: 2px;
+  border: 4px;
   border-color: @fg;
   transparency: "real";
+  width: 720;
 }
 
 mainbox {

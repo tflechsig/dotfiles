@@ -33,7 +33,7 @@ icons[lockscreen]="\uf023"
 icons[switchuser]="\uf518"
 icons[logout]="\uf842"
 icons[suspend]="\uf9b1"
-icons[hibernate]="\uf7c9"
+icons[hibernate]="\uf186"
 icons[reboot]="\ufc07"
 icons[shutdown]="\uf011"
 icons[cancel]="\u00d7"
@@ -198,7 +198,7 @@ echo -e "\0markup-rows\x1ftrue"
 
 if [ -z "${selection+x}" ]
 then
-    echo -e "\0prompt\x1fPower menu"
+    echo -e "\0prompt\x1f"
     for entry in "${show[@]}"
     do
         echo -e "${messages[$entry]}\0icon\x1f${icons[$entry]}"
