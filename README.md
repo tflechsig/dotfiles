@@ -7,6 +7,7 @@
 - Bash
 - Vim & Neovim
 - Xorg init
+- DWM
 - Berry WM
 - Polybar
 - Alacritty
