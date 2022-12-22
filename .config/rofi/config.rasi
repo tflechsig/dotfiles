@@ -1,7 +1,8 @@
 @theme "~/.config/rofi/nord.rasi"
 
 configuration {
-	modi: "window,run,ssh,drun";
-	show-icons: true;
-	icon-theme: "Papirus";
+  modes:        "window,drun,ssh,combi";
+  combi-modes:  "window,drun,ssh";
+	show-icons:   true;
+	icon-theme:   "Papirus";
 }
