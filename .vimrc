@@ -9,7 +9,7 @@ endfunction
 function! StatusLineGit()
   let branchname = GitBranch()
   if strlen(branchname) > 0
-    let output=" ".branchname." |"
+    let output=" ".branchname." "
   else
     let output=''
   endif
@@ -81,8 +81,8 @@ set showcmd
 " enables status line
 set laststatus=2
 
-hi statusline   cterm=bold ctermbg=50 ctermfg=16 guibg=#00f0f0 guifg=#000000
-hi statuslinenc cterm=bold ctermbg=238 ctermfg=15 guibg=#6f6f6f guifg=#000000
+hi statusline   cterm=bold ctermbg=50 ctermfg=16 guibg=#88C0D0 guifg=#000000
+hi statuslinenc cterm=bold ctermbg=238 ctermfg=15 guibg=#434C5E guifg=#000000
 
  set statusline=\ %{DisplayMode()}\ 
                 \%{gitstatus}
