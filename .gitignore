@@ -1,0 +1,17 @@
+.config
+*swp
+Documents
+.gnupg
+.lesshst
+.local
+.pki
+.python_history
+.ssh
+.thunderbird
+.vim
+.viminfo
+.dotfiles.git
+.Xauthority
+.bash_history
+.cache
+
