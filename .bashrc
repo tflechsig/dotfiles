@@ -10,7 +10,6 @@ alias spotify="spotify --no-zygote"
 bind "set completion-ignore-case on"
 
 # prevents additional space added when expanding
-# env variable path names
 shopt -s direxpand
 
 # enable vi movements within shell
