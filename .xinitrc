@@ -35,8 +35,8 @@ fi
 xset r rate 200 20
 nitrogen --restore &
 xrandr --size 1920x1080
-# exec polybar -r &
-# sxhkd -c $HOME/.config/berry/sxhkdrc &
-# exec berry
+dwmblocks &
 exec dwm
+
+
 
