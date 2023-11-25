@@ -38,5 +38,3 @@ xrandr --size 1920x1080
 dwmblocks &
 exec dwm
 
-
-
