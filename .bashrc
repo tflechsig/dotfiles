@@ -1,9 +1,11 @@
 # T. Flechsig
 alias ls="ls -lath --color --group-directories-first"
 alias vim=nvim
+alias v=vim
+alias g=git
 alias poff="systemctl poweroff"
 # Manage dot files with bare git repo 
-alias gid="git --git-dir=$HOME/.dotfiles.git/ --work-tree=$HOME/"
+alias gc="git --git-dir=$HOME/.dotfiles.git/ --work-tree=$HOME/"
 alias spotify="spotify --no-zygote"
 
 # case insensitive tab completion
@@ -28,8 +30,8 @@ set_PS1 () {
   # if in home directory, git status should use dotfile bare git repo
   if [ $(pwd) == $HOME ]
   then
-    git_stat=$(gid status -uno 2>&1 | grep -o "fatal\|nothing")
-    git_branch=$(gid branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ \1/')
+    git_stat=$(gc status -uno 2>&1 | grep -o "fatal\|nothing")
+    git_branch=$(gc branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ \1/')
   else
     git_stat=$(git status -uno 2>&1 | grep -o "fatal\|nothing")
     git_branch=$(git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ \1/')
