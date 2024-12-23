@@ -34,7 +34,6 @@ fi
 
 xset r rate 200 20
 nitrogen --restore &
-xrandr --size 1920x1080
+xrandr --size 1920x1080 -r 60
 dwmblocks &
 exec dwm
-
