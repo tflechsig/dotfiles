@@ -1,13 +1,12 @@
 "-------------------------------------------------------------------------------
-" Setup runtimepath and source existing vim configuration
+" Setup runtimepath
 "-------------------------------------------------------------------------------
 set runtimepath^=~/.vim runtimepath+=~/.vim/after
 let &packpath = &runtimepath
-source ~/.vimrc
 "-------------------------------------------------------------------------------
 
 "-------------------------------------------------------------------------------
-" Key mapppings 
+" Neovim specific key mapppings 
 "-------------------------------------------------------------------------------
 " Launch terminal
 nnoremap <leader>' :terminal<C-m>i
@@ -32,8 +31,6 @@ call plug#begin()
   " indentation symbols
   Plug 'lukas-reineke/indent-blankline.nvim'
   Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
-  " formatting
-  Plug 'stevearc/conform.nvim'
   " To Do: Add autocompletion and telescope
 call plug#end()
 
@@ -85,8 +82,6 @@ lua << EOF
   })
 
   vim.cmd.colorscheme({"tokyonight"})
-  -- vim.cmd.highlight({"statusline", "guibg="..colors.fg_gutter})
-  -- vim.cmd.highlight({"statuslinenc","guibg="..colors.fg_gutter})
   
   require'lualine'.setup({
     options = {
@@ -112,25 +107,13 @@ lua << EOF
   })
 
   require("mason").setup({
-      ui = {
-          icons = {
-              package_installed = "✓",
-              package_pending = "➜",
-              package_uninstalled = "✗"
-          }
+    ui = {
+      icons = {
+        package_installed = "✓",
+        package_pending = "➜",
+        package_uninstalled = "✗"
       }
-  })
-  
-  require("conform").setup({
-    formatters_by_ft = {
-      lua = { "stylua" },
-      python = { "black" }
-    },
-    format_on_save = {
-      -- These options will be passed to conform.format()
-      timeout_ms = 500,
-      lsp_format = "fallback",
-    },
+    }
   })
   
   require'ibl'.setup()
@@ -141,3 +124,10 @@ lua << EOF
 
 EOF
 "-------------------------------------------------------------------------------
+
+"-------------------------------------------------------------------------------
+"- Source existing vim config
+"-------------------------------------------------------------------------------
+source ~/.vimrc
+"-------------------------------------------------------------------------------
+
