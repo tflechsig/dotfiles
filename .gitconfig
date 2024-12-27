@@ -5,3 +5,15 @@
 	editor = vim
 [init]
 	defaultBranch = master
+[alias]
+  s = status
+  su = status -uno
+  a = add
+  au = add -u
+  cm = commit -m
+  can = commit --amend --no-edit
+  co = checkout
+  d = diff
+  dc = diff --cached
+  ps = push
+  pl = pull
