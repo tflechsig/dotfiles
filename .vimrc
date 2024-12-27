@@ -38,11 +38,39 @@ function! DisplayMode()
 endfunction
 
 "===============================================================================
-" Environment settings  
+" Colorscheme and status line
 "===============================================================================
-set runtimepath+=~/seneca/users/flechsig/linux_cfg_files/vim
+if !has('nvim')
+  colorscheme badwolf
+  
+  " Assign when this script is sourced, then use auto commands to update
+  let gitstatus=StatusLineGit()
+  
+  " assign system verilog files to syntax type of verilog
+  augroup sv_ft
+    au!
+    autocmd BufNewFile,BufRead *.sv set syntax=verilog
+    autocmd BufWinEnter,ShellCmdPost * let gitstatus=StatusLineGit()
+  augroup END
+  
+  hi statusline   cterm=bold ctermbg=50 ctermfg=16 guibg=#88C0D0 guifg=#000000
+  hi statuslinenc cterm=bold ctermbg=238 ctermfg=15 guibg=#434C5E guifg=#000000
+  
+  set statusline=\ %{DisplayMode()}\ 
+                 \%{gitstatus}
+                 \\ %t
+                 \%=
+                 \\ %p%%\ (%l,%c)\ 
 
-colorscheme badwolf
+  " Set background color of vertical split
+  hi VertSplit ctermbg=bg
+
+endif
+
+"===============================================================================
+" Editor settings  
+"===============================================================================
+set runtimepath+=~/.vim
 
 " tag paths are relative to current vim directory, not relative to the path of
 " the tags file
@@ -81,20 +109,11 @@ set showcmd
 " enables status line
 set laststatus=2
 
-hi statusline   cterm=bold ctermbg=50 ctermfg=16 guibg=#88C0D0 guifg=#000000
-hi statuslinenc cterm=bold ctermbg=238 ctermfg=15 guibg=#434C5E guifg=#000000
-
- set statusline=\ %{DisplayMode()}\ 
-                \%{gitstatus}
-                \\ %t
-                \%=
-                \\ %p%%\ (%l,%c)\ 
-
 " set line wrap to occur after 80 characters
 set textwidth=80
 
 " highlight automatic text wrap column
-" set colorcolumn=80
+set colorcolumn=80
 
 set wildmenu
 
@@ -108,9 +127,6 @@ set hlsearch
 
 set wildignorecase
 
-" search font color
-" hi Search ctermfg=black ctermbg=cyan
-
 " smartindent seems better
 set smartindent
 
@@ -120,15 +136,6 @@ set directory=~/.vim/swp/
 " Set netrw file explorer list style to tree
 let g:netrw_liststyle = 1
 
-" set sessionoptions-=options
-
-" assign system verilog files to syntax type of verilog
-augroup sv_ft
-  au!
-  autocmd BufNewFile,BufRead *.sv set syntax=verilog
-  autocmd BufWinEnter,ShellCmdPost * let gitstatus=StatusLineGit()
-augroup END
-
 autocmd FileType netrw setl bufhidden=delete
 
 " set command history window height
@@ -137,13 +144,14 @@ set cmdwinheight=2
 " Set vertical window separator character
 set fillchars=vert:│
 
-" Set background color of vertical split
-hi VertSplit ctermbg=bg
+" Turn off vim file type settings that override vimrc settings
+filetype indent off
+filetype plugin off
 
 "===============================================================================
 " Key mappings
 "===============================================================================
-let mapleader=" "
+let g:mapleader=" "
 inoremap  kj                <Esc>
 nnoremap  j                 gj
 nnoremap  k                 gk
