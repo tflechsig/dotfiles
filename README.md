@@ -1,7 +1,7 @@
 # Installation
-    alias gid="git --git-dir=$HOME/.dotfiles.git/ --work-tree=$HOME"
+    alias gc="git --git-dir=$HOME/.dotfiles.git/ --work-tree=$HOME"
     git clone --bare https://github.com/tflechsig/dotfiles.git $HOME/.dotfiles.git
-    gid checkout
+    gc checkout
 
 # Configuration Contents
 - Bash
