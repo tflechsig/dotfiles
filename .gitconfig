@@ -8,6 +8,7 @@
 [alias]
   s = status
   su = status -uno
+  l = log
   a = add
   au = add -u
   cm = commit -m
