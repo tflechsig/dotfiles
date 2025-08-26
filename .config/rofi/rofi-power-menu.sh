@@ -31,10 +31,10 @@ texts[shutdown]="shut down"
 declare -A icons
 icons[lockscreen]="\uf023"
 icons[switchuser]="\uf518"
-icons[logout]="\uf842"
-icons[suspend]="\uf9b1"
+icons[logout]="\Uf0343"
+icons[suspend]="\Uf04b2"
 icons[hibernate]="\uf186"
-icons[reboot]="\ufc07"
+icons[reboot]="\Uf0709"
 icons[shutdown]="\uf011"
 icons[cancel]="\u00d7"
 
